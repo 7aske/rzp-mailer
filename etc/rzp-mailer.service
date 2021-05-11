@@ -1,0 +1,12 @@
+[Unit]
+Description=RZP Mailer
+After=network.target
+
+[Service]
+User=root
+Group=root
+WorkingDirectory=/srv/http/rzp/mailer
+ExecStart=node index.js
+
+[Install]
+WantedBy=multi-user.target
